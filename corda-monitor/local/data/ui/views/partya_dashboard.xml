@@ -1,0 +1,22 @@
+<dashboard>
+  <label>PartyA Dashboard</label>
+  <row>
+    <panel>
+      <table>
+        <search>
+          <query>index="main" sourcetype=partya_flows_started | stats latest(value) as "PartyA Started Flows"</query>
+          <earliest>rt-5m</earliest>
+          <latest>rt</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="count">20</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="rowNumbers">false</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+      </table>
+    </panel>
+  </row>
+</dashboard>

@@ -1,0 +1,27 @@
+version: '3.6'
+
+services:
+  splunk:
+    image: splunk/splunk:latest
+    container_name: splunk
+    environment:
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_HEC_TOKEN=11111111-1111-1111-1111-1111111111113
+      - SPLUNK_PASSWORD=changeme
+      - SPLUNK_APPS_URL=https://splunkbase.splunk.com/app/1546/release/1.8.7/download
+      - SPLUNKBASE_USERNAME=****
+      - SPLUNKBASE_PASSWORD=****
+    ports:
+      - 18000:8000
+    healthcheck:
+      test: ['CMD', 'curl', '-f', 'http://localhost:8000']
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    volumes:
+      - ./splunk.yml:/tmp/defaults/default.yml
+      - /opt/splunk/var
+      - /opt/splunk/etc
+      - ../corda-monitor:/opt/splunk/etc/apps/corda-monitor
+      - ../rest_ta:/opt/splunk/etc/apps/rest_ta
+      - ../workflows-java/build/nodes/PartyA/logs:/opt/splunk/etc/partya-logs

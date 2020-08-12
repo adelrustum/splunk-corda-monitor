@@ -1,0 +1,28 @@
+[app/ui]
+owner = admin
+version = 8.0.5
+modtime = 1597165435.161558000
+
+[app/launcher]
+owner = admin
+version = 8.0.5
+modtime = 1597165435.164741000
+
+[app/package/check_for_updates]
+version = 8.0.5
+modtime = 1597165435.165829000
+
+[views/partya_dashboard]
+owner = admin
+version = 8.0.5
+modtime = 1597166031.087338000
+
+[savedsearches/Unfinished%20Flows]
+owner = admin
+version = 8.0.5
+modtime = 1597170556.224677000
+
+[inputs/monitor%3A%2F%2F%2Fopt%2Fsplunk%2Fetc%2Fpartya-logs]
+owner = admin
+version = 8.0.5
+modtime = 1597171383.357187000
