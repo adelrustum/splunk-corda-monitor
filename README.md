@@ -1,0 +1,1 @@
+This repository is a sample project that shows you how to connect Corda and Splunk; the detailed explanation can be found in [this article](https://blog.b9lab.com/monitoring-corda-nodes-with-splunk-1ab61be38e7c).
